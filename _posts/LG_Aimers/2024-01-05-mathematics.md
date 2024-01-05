@@ -27,7 +27,7 @@ Determinant란 어떤 matrix의 역행렬을 구할 때 분모에 위치하는 �
 Trace란 Matrix 의 Diagonal Entry를 다 더한 형태로 Trace의 중요한 성질 중 하나는 덧셈에 대해 분해가 된다는 점이다.
 - $tr(A+B)=tr(A)+tr(B)$
 
-<p align="center"><img scr="https://github.com/jebeom/jebeom.github.io/assets/107978090/89b0970a-a7d5-49d8-831f-f1eb2ac0397f" width = "700" ></p>
+<p align="center"><img src="https://github.com/jebeom/jebeom.github.io/assets/107978090/89b0970a-a7d5-49d8-831f-f1eb2ac0397f" width = "700" ></p>
 
 위 그림에서 $\lambda$는 eigenvalue 이며, $x$는 eigenvector이며 $det(A)$는  eigenvalue 들의 곱셈으로 표현되며 $tr(A)$는 eigenvalue들의 덧셈으로 표현된다.
 
@@ -111,7 +111,7 @@ $f(x)$가 Convex Function 이고, subset을 이루는 $x$가 Convex Set이 될 �
 
 **Convex Set**은 Set안에 있는 2개의 point를 잡고 그 point들을 이었을 때 선분이 항상 set안에 있으면 convex set이다. 아래의 2번째 그림처럼 set안에 위치하지 않는 선분이 있거나 아래의 3번째 그림처럼 set에 빵구가 뚫려있으면 convex set이 아니다.
 
-<p align="center"><img scr="https://github.com/jebeom/jebeom.github.io/assets/107978090/408e6e48-5d28-4309-9785-4f3e8fa5ea12" width = "400" ></p>
+<p align="center"><img src="https://github.com/jebeom/jebeom.github.io/assets/107978090/408e6e48-5d28-4309-9785-4f3e8fa5ea12" width = "400" ></p>
 
 위의 그림에서 제일 왼쪽의 그림은 Convex Set이다.
 
@@ -129,6 +129,6 @@ Convex Optimization 이란 Convex Function와 Convex Set에 Constraint을 주고
 
 어떠한 Optimization Problem이든 KKT Condition이 Optimality의 필요조건이 되고, Convex Optimization 의 경우 KKT Condition이 필요충분조건이 된다. 즉, KKT Condition을 만족하는 $x^* $와 $\lambda^*$를 찾을 수 있다면 그것이 결국 Primal 과 Dual Optimum이 된다.
 
-<p align="center"><img scr="https://github.com/jebeom/jebeom.github.io/assets/107978090/f2047cdd-a0af-47a2-9660-3d0b38f65f4f" width = "600" ></p>
+<p align="center"><img src="https://github.com/jebeom/jebeom.github.io/assets/107978090/f2047cdd-a0af-47a2-9660-3d0b38f65f4f" width = "600" ></p>
 
 정리하자면 Objective 도 Linear 하고, Constraint 도 Linear 한 Linear Programming 의 경우 Convex Optimization 형태이기에 Primal Soultion과 Dual Solution이 같게 되고 KKT 조건들을 통해 Primal Soultion과 Dual Solution을 구하는 알고리즘을 만들 수 있다.
