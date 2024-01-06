@@ -3,7 +3,7 @@ title: "Fundamental Concepts"
 permalink: /categories/Fundamental/
 layout: category
 author_profile: true
-taxonomy: Basic
+taxonomy: Fundamental
 
 ---
 

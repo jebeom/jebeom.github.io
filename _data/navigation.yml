@@ -19,7 +19,7 @@ main:
 side:
    - title: LG Aimers
      children:
-       - title: "LG Aimers"
+       - title: "LG Aimers 강의내용"
          url: /categories/LG_Aimers/
     
    - title: Etc 
