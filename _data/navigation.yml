@@ -15,3 +15,16 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+ 
+side:
+   - title: LG Aimers
+     children:
+       - title: "LG Aimers"
+         url: /categories/LG_Aimers/
+    
+   - title: Etc 
+     children:
+       - title: "Fundamental Concepts"      
+         url: /categories/Fundamental/
+       - title: "Tips"
+         url: /categories/Tips/
