@@ -3,7 +3,7 @@ title : "[LG Aimers] Mathematics for ML"
 excerpt: "행렬 분해, 최적화, 주성분 분석 등 데이터를 다루기 위한 Mathematics들을 알아보자"
 
 category :
-    - LG Aimers
+    - LG_Aimers
 tag :
     - mathematics
 

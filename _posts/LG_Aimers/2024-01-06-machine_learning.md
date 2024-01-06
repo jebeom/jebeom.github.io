@@ -3,7 +3,7 @@ title : "[LG Aimers] Machine Learning 개론"
 excerpt: "Machine Learning의 기본 개념에 대해 알아보자"
 
 category :
-    - LG Aimers
+    - LG_Aimers
 tag :
     - machine_learning
 
