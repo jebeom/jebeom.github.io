@@ -146,11 +146,11 @@ Convex Optimization 이란 Convex Function와 Convex Set에 Constraint을 주고
 
 <p align="center"><img src="https://github.com/jebeom/jebeom.github.io/assets/107978090/285871fb-1c85-4bc4-a63a-fd26fd16928e" width = "700" ></p>
 
-**Data Covariance Matrix(공분산 행렬)**란 Data Matrix $XX^T$를 Data 개수 N으로 나눈 행렬 S를 의미하며 항상 Positive Definite가 되며 Eigenvalue 도 존재하고 Symmetric하다. 이러한 Data Covariance Matrix $S$를 계산하고 X의 eigenvalue와 eigenvector를 계산한 후에 PCA를 진행한다.
+### Data Covariance Matrix
 
+Data Covariance Matrix(공분산 행렬)란 Data Matrix $XX^T$를 Data 개수 N으로 나눈 행렬 S를 의미하며 항상 Positive Definite가 되며 Eigenvalue 도 존재하고 Symmetric하다. 이러한 Data Covariance Matrix $S$를 계산하고 $X$의 eigenvalue와 eigenvector를 계산한 후에 PCA를 진행한다.
 
 수식적으로 보면 PCA는 차원이 D인 Original Data $x$가 있을 때 Orthonormal한 선형 행렬 $B$를 곱해서 차원을 M으로 축소시킨 $z$ Data가 되고, 여기에 $B^T$를 곱해서 Original Space에 Reconstruction 된 Data $\tilde{x}$가 나오게 하는 방법이다.
-
 
 <p align="center"><img src="https://github.com/jebeom/jebeom.github.io/assets/107978090/14132646-63d2-4d15-bb31-26de00f0db92" width = "500" ></p>
 
@@ -168,4 +168,5 @@ Convex Optimization 이란 Convex Function와 Convex Set에 Constraint을 주고
 
 위와 같이 Constrained Optimization형태의 Lagrange 함수와 KKT Condition을 이용해 Solution이 k번째 가장 큰 Eigenvalue에 해당하는 Eigenvector라는 것을 확인할 수 있다. 따라서 행렬 $B$ 가 가장 큰 M개의 Eigenvalue들에 해당하는 Eigenvector가 된다.
 
+### PCA 요약
 **결론을 요약하자면 PCA는 선형 Matrix $B$를 찾아 데이터를 축소하고 특정 방향으로 데이터들을 projection 시키고 싶은 것인데 여기서 Data Covariance Matrix $S$가 늘려나가는 방향이 Eigenvector이고 늘리는 정도가 Eigenvalue 이다. 따라서 $B$의 방향이 Data Covariance Matrix $S$ 의 Eigenvector들이 된다.** 
