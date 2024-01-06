@@ -96,6 +96,7 @@ Machine Learning의 기본 개념에 대해 알아보자
 
 과적합(Overfitting)은 너무 과하게 학습 데이터에 적합된 즉, 복잡한 모델의 상태로 
 - Generation Error(모든 데이터상에서 에러의 평균값) > Training Error(학습 데이터상에서만의 에러) 
+
 반대로 과소적합(Underfitting)은 다음과 같다. 
 - Generation Error < Training Error
 
