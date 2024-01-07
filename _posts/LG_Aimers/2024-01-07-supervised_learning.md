@@ -123,7 +123,8 @@ Nestrov Momentum은 Momentum을 이용하는 Gradient Descent에서 조금 더 �
 
 ### Model의 Overfitting 문제를 해결하는 방법
 
-**Regulalization** 
-- 관련 내용은 이전 포스팅에서 설명했기에 생략하겠습니다. 다음 포스팅을 참고해주세요 [여기](https://jebeom.github.io/lg_aimers/machine_learning/)
+Overfitting 문제를 해결하는 대표적인 방법에는 **Regulalization**가 있다.
+
+- Regulalization 관련 내용은 이전 포스팅에서 설명했기에 생략하겠습니다. [여기](https://jebeom.github.io/lg_aimers/machine_learning/)를 참고해주세요 !!
 
 
