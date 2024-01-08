@@ -1,5 +1,5 @@
 ---
-title: "Fundamental Concepts"
+title: "Fundamental"
 permalink: /categories/Fundamental/
 layout: category
 author_profile: true

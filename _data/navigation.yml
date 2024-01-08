@@ -24,7 +24,7 @@ side:
     
    - title: Etc 
      children:
-       - title: "Fundamental Concepts"      
+       - title: "Fundamental"      
          url: /categories/Fundamental/
        - title: "Tips"
          url: /categories/Tips/
