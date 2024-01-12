@@ -17,9 +17,9 @@ comments: true
 
 > 본 포스팅은 LG Aimers 수업 내용을 정리한 글로 모든 내용의 출처는 [LG Aimers](https://www.lgaimers.ai)에 있습니다
 
-## 심층신경망(Deep Neural Networks)
+## 심층 신경망(DNN)
 
-심층신경망은 두뇌의 동작 과정을 모방해서 수학적인 인공지능 알고리즘으로 만든 것으로 신경세포 하나는 다른 신경 세포들과 연결되어 있어 다른 신경세포들로부터 전기 신호를 입력받는데 입력받은 전기 신호에 특정한 값을 곱해서 더해서 전기 신호를 만들어내고 이 전기 신호를 다른 신경 세포들에게 전달해주는 과정을 거친다.
+심층 신경망(Deep Neural Network)은 두뇌의 동작 과정을 모방해서 수학적인 인공지능 알고리즘으로 만든 것으로 신경세포 하나는 다른 신경 세포들과 연결되어 있어 다른 신경세포들로부터 전기 신호를 입력받는데 입력받은 전기 신호에 특정한 값을 곱해서 더해서 전기 신호를 만들어내고 이 전기 신호를 다른 신경 세포들에게 전달해주는 과정을 거친다.
 
 이러한 뉴런의 동작 과정을 수학적으로 본따 만든 알고리즘을 **Perceptron**이라 하며, Perceptron은 입력 정보($x_{1},x_{2}$)를 가중치($w$)와 곱하고 특정한 상수 값을 더한 가중합을 만들어내고 Sigmoid, tanh, ReLu 등의 활성화 함수를 거쳐서 최종 출력 신호를 만들어주게 되며 다음 계층(layer)의 뉴런들에게 해당 출력을 전달해준다.
 
@@ -53,9 +53,9 @@ comments: true
 
 또한 위 그림과 같이 softmax layer에는 MAE(최소제곱법) loss 대신 softmax loss, 즉, Cross-Entropy Loss를 사용하게 되며 정답 Class에 해당하는 확률 값이 최대한 1이 나오도록 Loss function을 위 그림에서의 수식과 같이 사용해주게 된다.
 
-여기서 $\hat{p}_{c}$는 우리의 예측된 확률 vector이며, $y_{c}$는 Ground truth vector로 해당하는 class 일 때는 1, 아니면 0 소위 말하는 one-hot vector형태로 주어지며 index i는 i번째 training data 아이템이다. (예를 들어 i가 37이면 Cat에 속함)
+여기서 $\hat{p_{c}}$는 우리의 예측된 확률 vector이며, $y_{c}$는 Ground truth vector로 해당하는 class 일 때는 1, 아니면 0 소위 말하는 one-hot vector형태로 주어지며 index i는 i번째 training data 아이템이다. (예를 들어 i가 37이면 Cat에 속함)
 
-최종적으로 $ loss(L) = -log(\hat{p}_{y_{i}}})$ 그래프가 오른쪽 아래처럼 그려지기 때문에 정답 class에 부여된 확률 값이 작아질수록 Loss가 매우 커지고, 확률 값이 1에 가까워질수록 loss값이 0에 가까워진다.
+최종적으로 $loss(L) = -log(\hat{p_{y_{i}}})$ 그래프가 오른쪽 아래처럼 그려지기 때문에 정답 class에 부여된 확률 값이 작아질수록 Loss가 매우 커지고, 확률 값이 1에 가까워질수록 loss값이 0에 가까워진다.
 
 Binary classification 즉, class가 2개만 있을 때 많이 사용하는 logistic regression도 아래 그림과 같이 softmax classifire의 Special case로 이해가능하다.
 
@@ -63,9 +63,9 @@ Binary classification 즉, class가 2개만 있을 때 많이 사용하는 logis
 
 위 문제는 class가 1개만 있고, 맞다 아니다에 해당하는 경우이고, class가 2개 인 경우 W에 한 줄의 가중치가 더 부여가 되어 output 노드를 2개로 만들고, 지수함수를 통과시켜 상대적인 비율을 계산한다. class의 개수가 2개인 BCE loss(L) 수식도 위의 그림에서 확인할 수 있다. 여기서 $y_{i}$는 positive class 일 때는 1이고, negative class 일 때는 0으로 정의된다.
 
-## 심층신경망의 학습 과정
+## 심층 신경망의 학습 과정
 
-심층신경망의 학습 과정은 학습 data를 parameter들로 이루어진 neural network에 입력으로 집어넣고 gruond truth값(실제값)과 비교함으로써 차이를 최소화하는 Loss function을 만들고 이를 최적화시키는 parameter들을 찾는 과정이다.
+심층 신경망의 학습 과정은 학습 data를 parameter들로 이루어진 neural network에 입력으로 집어넣고 gruond truth값(실제값)과 비교함으로써 차이를 최소화하는 Loss function을 만들고 이를 최적화시키는 parameter들을 찾는 과정이다.
 
 이러한 parameter들을 찾는 과정은 현재 주어진 Parameter값을 각각의 Parameter들의 미분 방향의 마이너스 방향으로 그리고 step size 혹은 learning rate을 곱해서 해당 Parameter값을 업데이트하면서 진행된다.
 
@@ -131,12 +131,6 @@ Batch Normalization의 기본적인 동작 과정은 다음과 같다.
 <p align="center"><img src="https://github.com/jebeom/jebeom.github.io/assets/107978090/92e2dd49-1daf-4a1f-893a-8eb794a793ad"></p>
 
 Batch Normalization의 과정을 요약하면 위의 그림과 같다.
-
-
-
-
-
-
 
 
 
