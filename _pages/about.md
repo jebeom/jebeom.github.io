@@ -14,7 +14,7 @@ This is Jebeom Chae who wants to become an expert in the development of Sensor F
 
 I start my blog to record and share what I have learned.  
 
-### If you want to know more about me, please see my CV  
+### If you want to know more about me, please see my [CV](https://github.com/jebeom/Jebeom_CV/blob/main/Jebeom_CV.pdf).  
 
 ## Research Interest  
 
