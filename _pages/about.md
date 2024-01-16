@@ -10,7 +10,7 @@ layout: single
 
 Welcome to my Tech Blog!  
 
-This is Jebeom Chae who wants to become an expert in the development of Sensor Fusion systems or Autonomous Driving. I'm an **proactive student**, and I also hope to grow up with my collegues.
+This is Jebeom Chae, who wants to become an expert in the fields of Robotics or Autonomous Driving. I'm a **proactive student**, and I also hope to grow up with my collegues.
 
 I start my blog to record and share what I have learned.  
 
@@ -18,11 +18,10 @@ I start my blog to record and share what I have learned.
 
 ## Research Interest  
 
-- Maching Learning  
-- Artificial Intelligence
-- Sensor Fusion  
-- Computer Vision  
-- Deep Learning
+- Robotics  
+- Sensor Fusion
+- Deep Learning  
+- Computer Vision
 
 ## Contacts  
 
