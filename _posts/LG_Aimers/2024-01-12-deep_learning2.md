@@ -95,7 +95,7 @@ ResNet(Residal Network)은 convolution layer를 통해 나온 output에 layer를
 
 <p align="center"><img src="https://github.com/jebeom/jebeom.github.io/assets/107978090/72eaa86b-d1a7-4d84-9d7c-c77dcef0a37d" ></p>
 
-위 그림과 같이 RNN의 기본동작 원리는 현재 time step에서의 입력 신호 $x_{t}$와 그 이전 time step에서 동일한 RNN function이 계산했던 Hidden state vector인 $h_{t-1}$을 입력으로 받아서 현재 time step에서 RNN module의 output인 currrent hidden state vector($h_{t}$를 만들어주게 된다. 여기서 매 time step마다 동일한 parameter set을 가지는 layer인 $f_{w}$가 반복적으로 수행되며, prediction을 해야 하는 특정 time step에서 $h_{t}$를 다시 입력으로 output layer에 전달해 줌으로써 최종 예측 결과를 만들어주게 된다.
+위 그림과 같이 RNN의 기본동작 원리는 현재 time step에서의 입력 신호 $x_{t}$와 그 이전 time step에서 동일한 RNN function이 계산했던 Hidden state vector인 $h_{t-1}$을 입력으로 받아서 현재 time step에서 RNN module의 output인 currrent hidden state vector($h_{t}$)를 만들어주게 된다. 여기서 매 time step마다 동일한 parameter set을 가지는 layer인 $f_{w}$가 반복적으로 수행되며, prediction을 해야 하는 특정 time step에서 $h_{t}$를 다시 입력으로 output layer에 전달해 줌으로써 최종 예측 결과를 만들어주게 된다.
 
 ### RNN을 사용한 자연어 처리 원리
 
