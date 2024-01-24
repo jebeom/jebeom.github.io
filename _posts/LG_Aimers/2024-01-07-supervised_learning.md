@@ -56,7 +56,6 @@ Regression은 model의 출력이 연속인 값을 갖게 되므로 연속되는 
 따라서 앞서 구한 Matrix에 y를 곱하는 하나의 Step을 통해 Parameter를 구할 수 있지만 Data의 수 즉, N이 커지면 Matrix 의 inverse 연산이 복잡해지고 역행렬이 존재하지 않을 수도 있기에 iterative 알고리즘인 **Gradient Descent** 방식을 사용한다.
 
 ## Gradient Descent
-
 여기서 Gradient란 함수를 미분하여 얻는 term으로 해당 함수의 변화하는 정도를 표현하는 값이다. 이러한 Gradient가 0인 지점에서 값이 최소가 된다. 따라서 Gradient Descent 는 Gradient가 0인 지점까지 반복적으로 Parameter $\theta$를 바꾸어 나가며 최적의 Parameter 값을 찾는다.
 
 Gradient Descent의 과정은 다음과 같다.
@@ -83,11 +82,12 @@ Linear regression model 에서 목적 함수 J의 partial derivative term을 넣
 
 ### Stochastic Gradient Descent
 
-Batch Gradient Descent의 문제를 해결하기 위해 m(sample의 개수)을 1로 바꾼 알고리즘으로 빠르게 iteration이 가능하지만 샘플 하나에 대해서만 parameter값을 업데이트 하기에 noise의 영향을 받기 쉬워 Oscillation이 발생할 수 있다는 단점이 있다.
+Batch Gradient Descent의 문제를 해결하기 위해 전체 데이터(Batch) 대신 일부 데이터의 모음(Mini-Batch)을 사용하여 Loss Function을 최소화 시키는 알고리즘으로 빠르게 iteration이 가능하지만 적은 샘플에 대해서만 parameter값을 업데이트 하기에 noise의 영향을 받기 쉬워 Oscillation이 발생할 수 있다는 단점이 있다.
 
+## Gradient Descent with Momentum
 ### Gradient Descent 알고리즘의 단점
 
-Gradient Descent 알고리즘은 시작하는 Point에 따라서 Global Optimum이 아니라 Local Optimum에 빠질 수 있다는 단점이 있다. 따라서 다양한 변형 알고리즘들이 개발되었는데 그 중에서도 가장 대표적인 것이 바로 **momentum**을 이용하는 것이다.
+Gradient Descent 알고리즘은 시작하는 Point에 따라서 Global Optimum이 아니라 Local Optimum에 빠질 수 있다는 단점이 있다. 따라서 다양한 변형 알고리즘들이 개발되었는데 그 중에서도 가장 대표적인 것이 바로 **Momentum**을 이용하는 것이다.
 
 **Momentum**은 과거에 Gradient가 업데이트 되어오던 방향 및 속도를 어느 정도 반영해서 현재 포인트에서 Gradient가 0이 되더라도 계속해서 학습을 진행할 수 있는 동력을 제공한다.
 
@@ -103,7 +103,8 @@ Nestrov Momentum은 Momentum을 이용하는 Gradient Descent에서 조금 더 �
 
 위의 오른쪽 그림과 같이 momentum step만큼 이동을 하고 그 지점에서 lookahead gradient step을 계산하여 actual step을 계산한다.
 
-### Local Minimum을 피하기 위한 다른 방법
+## Local Minimum을 피하기 위한 다른 방법
+### AdaGrad, RMSProp, Adam
 
 이외에도 Local minimum을 피하기 위해 r을 업데이트 할 때 gradient의 제곱을 그대로 곱하는 AdaGrad가 있다. 다만 이 방식은 gradient의 값이 계속해서 누적이 됨에 따라서 learning rate의 값이 작아져 학습이 일어나지 않게 된다. 이러한 단점을 보완하기 위한 방법에 RMSProp 방법이 있다. RMSProp은 r을 업데이트 할 때 기존의 r에 $\rho$ 값을 곱하고 $(1-\rho)$를 gradient의 제곱에다가 곱함으로써 gradient 값이 누적됨에 따라 $\theta$ 값이 줄어드는 것이 아닌 완충된 형태로 학습속도가 줄어들게 된다.
 
@@ -113,14 +114,19 @@ Nestrov Momentum은 Momentum을 이용하는 Gradient Descent에서 조금 더 �
 
 <p align="center"><img src="https://github.com/jebeom/jebeom.github.io/assets/107978090/9cbd5405-b1b5-46ef-ad77-f1ef3f74b12b" width = "700" ></p>
 
-## Model을 학습할 때 유용한 Tip들 
+### Optimizer 계보
 
+지금까지 Gradient Descent, Momentum, Adam 등 Loss Function을 최소화 하는 Parameter들을 구하는 다양한 Optimizer들에 대해 알아보았다. 아래의 그림을 통해 어떠한 방법으로 Optimizer가 개선되었는지 확인할 수 있다.
+
+<p align="center"><img src="https://github.com/jebeom/jebeom.github.io/assets/107978090/d387d80a-d6ea-4980-a0ec-ebdc7c08fbe6" ></p>
+
+## Model을 학습할 때 유용한 Tip들 
 ### Learning rate Scheduling 방법
 
-<p align="center"><img src="https://github.com/jebeom/jebeom.github.io/assets/107978090/411d4f35-298f-4554-817a-e94af53f5372" width = "700" ></p>
+아래 그림과 같이 low learning rate의 경우 천천히 수렴하지만 loss를 줄일 수 있다. 반대로 high learning rate의 경우 학습이 진행되며 수렴하는 정도가 low learning rate보다 줄어들지 않지만 빠르게 학습을 진행할 수 있다. Hyperparameter인 Step size $\alpha$를 학습 과정에 따라 줄여나가면 초기에는 학습을 빠르게 진행할 수 있지만 이후에 $\alpha$ 값을 늘리게 되면서 Loss가 줄어들지 못하는 문제를 Learning rate를 점차적으로 줄임으로써 해결해 학습을 용이하게 할 수 있다.
 
-위의 그림과 같이 low learning rate의 경우 천천히 수렴하지만 loss를 줄일 수 있다. 반대로 high learning rate의 경우 학습이 진행되며 수렴하는 정도가 low learning rate보다 줄어들지 않지만 빠르게 학습을 진행할 수 있다. Hyperparameter인 Step size $\alpha$를 학습 과정에 따라 줄여나가면 초기에는 학습을 빠르게 진행할 수 있지만 이후에 $\alpha$ 값을 늘리게 되면서 Loss가 줄어들지 못하는 문제를 Learning rate를 점차적으로 줄임으로써 해결해 학습을 용이하게 할 수 있다.
-
+<p align="center"><img src="https://github.com/jebeom/jebeom.github.io/assets/107978090/411d4f35-298f-4554-817a-e94af53f5372" ></p
+>
 ### Model의 Overfitting 문제를 해결하는 방법
 
 Overfitting 문제를 해결하는 대표적인 방법에는 **Regulalization**가 있다.
