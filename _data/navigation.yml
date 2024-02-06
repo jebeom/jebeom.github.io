@@ -21,8 +21,24 @@ side:
      children:
        - title: "LG Aimers 강의내용"
          url: /categories/LG_Aimers/
-    
-   - title: Etc 
+       - title: "LG Aimers 해커톤"
+         url: /categories/LG_Aimers_Hackathon/
+
+   - title: MACHINE LEARNING      
+     children:
+       - title: "Research"
+         url: /categories/Machine_Learning_Research/
+       - title: "Paper Review"
+         url : /categories/Machine_Learning_Paper_Review/
+
+   - title: ROBOTICS
+     children:
+       - title: "Research"
+         url: /categories/Robotics_Research/
+       - title: "Paper Review"
+         url : /categories/Robotics_Paper_Review/
+ 
+   - title: ETC 
      children:
        - title: "Fundamental"      
          url: /categories/Fundamental/
