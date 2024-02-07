@@ -121,6 +121,12 @@ from sklearn.tree import DecisionTreeClassifier
 ### 데이터 전처리
 
 ```
+df_train = pd.read_csv("train.csv") # 학습용 데이터
+df_test = pd.read_csv("submission.csv") # 테스트 데이터(제출파일의 데이터)
+```
+우선 위와 같은 작업을 통해 데이터 셋들을 읽어왔다.
+
+```
 def label_encoding(series: pd.Series) -> pd.Series:
     """범주형 데이터를 시리즈 형태로 받아 숫자형 데이터로 변환합니다."""
 
