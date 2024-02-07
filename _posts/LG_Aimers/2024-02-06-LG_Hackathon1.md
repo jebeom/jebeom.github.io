@@ -1,6 +1,6 @@
 ---
-title : "[해커톤] MQL 데이터 기반 B2B 영업기회 창출 예측 모델 개발"
-excerpt: "LG Aimers에서 주최한 Hackathon 속 Dataset의 Feature들과 Base코드에 대해 알아보도록 하자."
+title : "[LG 해커톤] MQL 데이터 기반 B2B 영업기회 창출 예측 모델 개발(Base Code)"
+excerpt: "LG Aimers에서 주최한 Hackathon 속 Dataset의 Feature들과 Base코드에 대해 알아보자"
 
 category :
     - LG_Aimers_Hackathon
@@ -13,7 +13,7 @@ comments: true
 
 ---
 
-LG Aimers에서 주최한 Hackathon 속 Dataset의 Feature들과 Base코드에 대해 알아보도록 하자.
+LG Aimers에서 주최한 Hackathon 속 Dataset의 Feature들과 Base코드에 대해 알아보자
 
 ## 해커톤 문제 소개
 
