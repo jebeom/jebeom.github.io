@@ -17,11 +17,11 @@ I start my blog to record and share what I have learned.
 ### If you want to know more about me, please see my [CV](https://github.com/jebeom/Jebeom_CV/blob/main/Jebeom_CV.pdf).  
 
 ## Research Interest  
-
-- Robotics  
-- Sensor Fusion
+ 
+- Machine Learning
 - Deep Learning  
-- Computer Vision
+- Robotics
+- Sensor Fusion
 
 ## Contacts  
 
