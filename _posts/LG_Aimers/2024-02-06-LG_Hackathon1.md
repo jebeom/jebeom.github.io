@@ -19,9 +19,9 @@ LG Aimers에서 주최한 Hackathon 속 Dataset의 Feature들과 Base코드에 �
 
 이번 해커톤을 통해 풀 문제는 고객지수 중 하나인 **영업기회전환지수**이며, 이는 B2B Marketing에서 활용되는 고객지수이다. 
 
-여기서 B2B Marketing은 기업 고객을 대상으로 영업 기회를 발굴해서 지속적으로 매출을 발생시키는 것을 목표로 한다. 자사 제품에 대해 관심을 보이고 구매 가능성이 있는 잠재 고객을 Lead라고 하는데, 이러한 Lead 고객 중에서도 BANT Quatation에 대한 답변을 한 고객을 Marketing Qualified Lead 의 약자로 **MQL 고객** 이라고 정의를 하며 이러한 MQL 고객을 대상으로 영업 사원을 할당하게 되고, 최종적으로 구매까지 이어지게 하기 위해 개인화 Marketing 활동을 진행하게 된다.
+여기서 B2B Marketing은 기업 고객을 대상으로 영업 기회를 발굴해서 지속적으로 매출을 발생시키는 것을 목표로 한다. 자사 제품에 대해 관심을 보이고 구매 가능성이 있는 잠재 고객을 Lead라고 하는데, 이러한 Lead 고객 중에서도 BANT Quatation에 대한 답변을 한 고객을 Marketing Qualified Lead 의 약자로 **MQL 고객** 이라고 정의를 한다. 이러한 MQL 고객을 대상으로 영업 사원을 할당하게 되고, 최종적으로 구매까지 이어지게 하기 위해 개인화 Marketing 활동을 진행하게 된다.
 
-하지만 할당할 수 있는 영업사원의 수는 한정적이기에 MQL 고객 정보를 이용해서 영업 전환 성공 여부를 예측하는 AI Model 만든다면 각 고객의 영업 전환 성공 가능성을 지수로 표현할 수 있다. 이렇게 개발된 지수를 **영업기회전환지수**라고 한다.
+하지만 할당할 수 있는 영업사원의 수는 한정적이기에 MQL 고객 정보를 이용해서 영업 전환 성공 여부를 예측하는 AI Model 만든다면 각 고객의 영업 전환 성공 가능성을 지수로 표현할 수 있고 이 지수를 활용해 효율적으로 영업사원의 배치가 가능하다. 이렇게 개발된 지수를 **영업기회전환지수**라고 한다.
 
 본 해커톤에서는 약 30개의 Feature를 가진 학습용 Dataset인 train.csv 파일과, 제출용 Test Dataset인 submission 파일, 그리고 Base 코드가 제공된다.
 
@@ -113,7 +113,7 @@ from sklearn.metrics import (
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 ```
-수치 계산은 위한 numpy와, 표 형식의 데이터나 다양한 형태의 데이터 분석을 위한 numpy를 import 해주고, 머신러닝을 위한 라이브러리인 사이킷런(sklearn)을 import 해주었다.
+수치 계산을 위한 numpy와, 표 형식의 데이터나 다양한 형태의 데이터 분석을 위한 numpy를 import 해주고, 머신러닝을 위한 라이브러리인 사이킷런(sklearn)을 import 해주었다.
 
 또한 sklearn에서 평가지표 활용을 위한 라이브러리와 주어진 훈련 데이터를 훈련 데이터셋(Training Set)과 검증 데이터셋(Validation Set)으로 분류하기 위해 train_test_split을 import해주고 마지막으로 의사결정나무 모델을 사용하고 분류 문제이므로 DecisionTreeClassifier를 import해주었다.
 
@@ -203,7 +203,7 @@ x_train, x_val, y_train, y_val = train_test_split(
 model = DecisionTreeClassifier()
 ```
 
-Base 코드에서는 여러 Feature들을 이용해 **is_converted** Column을 분류하기 위해 위와 같이 의사결정나무 모델을 선택했다.
+Base 코드에서는 여러 Feature들을 이용해 **is_converted** Column의 Class를 분류하기 위해 위와 같이 의사결정나무 모델을 선택했다.
 
 ```
 model.fit(x_train.fillna(0), y_train)
@@ -260,7 +260,7 @@ sum(test_pred) # True로 예측된 개수
 
 <p align="center"><img src="https://github.com/jebeom/jebeom.github.io/assets/107978090/7364ec52-e6a5-4dea-a129-bd2ce7ed5f43" ></p> 
 
-True 예측된 개수는 위 사진과 같다.
+True로 예측된 개수는 위 사진에서 확인할 수 있듯이 1164개였다.
 ```
  # 제출 데이터 읽어오기 (df_test는 전처리된 데이터가 저장됨)
 df_sub = pd.read_csv("submission.csv")
