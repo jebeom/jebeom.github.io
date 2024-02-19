@@ -52,9 +52,9 @@ Data Set의 경우 아까 말했던 것 처럼 Train Data Set과 Test Data Set�
 
 - **historical_existing_cnt** : 이전에 Converted(영업 전환) 되었던 횟수
 
-- **id_strategic_ver** : (도메인 지식) 특정 사업부(Business Unit), 특정 사업 영역(Vertical Level1)에 대해 가중치를 부여
+- **id_strategic_ver** : (도메인 지식) 특정 사업부(Business Unit이 ID일 때), 특정 사업 영역(Vertical Level1)에 대해 가중치를 부여
 
-- **it_strategic_ver** : (도메인 지식) 특정 사업부(Business Unit), 특정 사업 영역(Vertical Level1)에 대해 가중치를 부여
+- **it_strategic_ver** : (도메인 지식) 특정 사업부(Business Unit이 IT일 때), 특정 사업 영역(Vertical Level1)에 대해 가중치를 부여
 
 - **idit_strategic_ver** : id_strategic_ver이나 it_strategic_ver 값 중 하나라도 1의 값을 가지면 1 값으로 표현
 
