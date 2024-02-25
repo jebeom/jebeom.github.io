@@ -26,6 +26,8 @@ side:
 
    - title: MACHINE LEARNING      
      children:
+       - title: "CS234 Summary"
+         url: /categories/CS234/
        - title: "Research"
          url: /categories/Machine_Learning_Research/
        - title: "Paper Review"
