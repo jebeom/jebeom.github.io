@@ -15,6 +15,8 @@ comments: true
 
 Hackathon을 진행하며 데이터 분석에 사용한 함수와 성능 개선 코드, 그리고 시도는 해보았지만 사용하지는 않은 방법들에 대해 알아보자
 
+> 코드 원본은 [여기](https://github.com/jebeom/LG_Aimers_4th/blob/main/code-0.5202.ipynb)에서 확인 가능합니다.
+
 ## 데이터 분석에 사용한 함수들 
 
 ### describe() 함수 (결측치, 이상치 확인하기)
