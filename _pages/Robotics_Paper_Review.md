@@ -1,5 +1,5 @@
 ---
-title: "Robotics Paper_Review"
+title: "Robotics Paper Review"
 permalink: /categories/Robotics_Paper_Review/
 layout: category
 author_profile: true
