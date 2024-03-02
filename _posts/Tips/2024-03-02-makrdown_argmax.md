@@ -1,6 +1,6 @@
 ---
-title : "LaTex 문법에서 문자 위,아래에 문자 쓰는 방법"
-excerpt: "LaTex 문법에서 문자 위,아래에 문자를 쓰는 방법에 대해 알아보자"
+title : "LaTex 문법에서 문자 아래와 위에 문자 쓰는 방법"
+excerpt: "LaTex 문법에서 문자 아래와 위에 문자를 쓰는 방법에 대해 알아보자"
 
 category :
     - Tips
