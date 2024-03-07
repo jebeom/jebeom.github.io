@@ -38,14 +38,14 @@ On-Policy 방식과 Off-Policy 방식의 주요 차이점은 다음과 같다.
 
 아래와 같이 Behavior Policy의 예시를 들 수 있다.
  
-$$ {s_{1},a_{1},r_{1}, ... , s_{T}} ~ b(a \vert s) $$
+$$ [ s_{1},a_{1},r_{1}, ... , s_{T} ] \sim b(a \vert s) $$
 
 
 즉, **On-Policy Method**는 Behavior Policy $=$ Target Policy 이기에 Agent가 직접 행한 내용에 대해서만 학습하여 직접 경험한 내용을 바탕으로 policy를 개선해 나가는 과정이며, 
 
 이와 반대로 **Off-Policy Method**는 이미 알고 있는 내용들을 바탕으로 아직 실행하지 않은 내용까지 예측해서 policy를 개선해 나가는 것이다.
 
-On-Policy Method 의 경우 샘플을 수집되는 순간 policy가 업데이트 되고 그 뒤로는 기존과 다르게 행동하기 때문에 필연적으로 수집한 샘플을 한번 보고 버려야 한다. 또한, Q가 매번 바뀌기 때문에 transition에 대한 전 지식을 활용할 수 없다.
+On-Policy Method 의 경우 샘플이 수집되는 순간 policy가 업데이트 되고 그 뒤로는 기존과 다르게 행동하기 때문에 필연적으로 수집한 샘플을 한번 보고 버려야 한다. 또한, Q가 매번 바뀌기 때문에 transition에 대한 전 지식을 활용할 수 없다.
 
 ### 각 Method의 대표 알고리즘
 
