@@ -136,8 +136,6 @@ Reward의 경우, 본 연구에서는 Large vision language model 중에서도 C
 
 특히, Reward를 선정할 때 인간이 설정하는 것이 아니라 LVLM(Large Vision-Language Model)을 사용하여 Reward를 Agent가 스스로 학습할 수 있게끔 한 점이 흥미로웠다. 
 
-
-
-
+[앞서 리뷰한 논문](https://jebeom.github.io/machine_learning_paper_review/Visual_Force/#3-conclusion)에서는 Force Control에 초점을 맞추고, Visual Encoder를 통해 Expert Data Set 중에서 취해야 할 자세(Pose)와 가장 비슷한 자세(Pose)를 고른 것과는 달리 본 논문에서는 일반화에 초점을 맞추고, 기존 Expert의 Policy에서 Online RL을 통해 Policy를 개선시켰다는 점에서 차이가 있다.
 
 
