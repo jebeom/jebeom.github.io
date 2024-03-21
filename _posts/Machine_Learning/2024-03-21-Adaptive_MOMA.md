@@ -122,7 +122,7 @@ Reward의 경우, 본 연구에서는 Large vision language model 중에서도 C
 
 <p align="center"><img src="https://github.com/jebeom/jebeom.github.io/assets/107978090/96d3f659-b5a5-4924-abaf-565907452a1e" ></p>
 
-그 결과 위 그림과 같이 모든 객체에 대한 평균 성공률을 50%에서 95%로 향상시켰다. 또한, 본 연구에서의 접근방법은 실험 A에서 볼 수 있듯이 초기의 Policy가 Task를 대부분 실패하는 경우에도 객체를 조작하는 방법을 스스로 학습할 수 있는 것을 확인할 수 있다.
+그 결과 위 그림과 같이 모든 객체에 대한 평균 성공률을 50%에서 95%로 향상시켰다. 또한, 본 연구에서의 접근방법은 실험 A의 결과에서 볼 수 있듯이 초기의 Policy가 Task를 대부분 실패하는 경우에도 객체를 조작하는 방법을 스스로 학습할 수 있는 것을 확인할 수 있다.
 
 <p align="center"><img src="https://github.com/jebeom/jebeom.github.io/assets/107978090/295b36f6-6959-485c-85f4-5b561d5447a4" ></p>
 
