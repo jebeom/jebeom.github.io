@@ -10,7 +10,9 @@ layout: single
 
 Welcome to my Tech Blog!  
 
-This is Jebeom Chae, who wants to become an expert in the fields of Robotics or Autonomous Driving. I'm a **proactive student**, and I also hope to grow up with my collegues.
+This is Jebeom Chae Who wants to become an expert in developing **control systems with machine learning** or in **autonomous driving**. 
+
+And I also interested in devising a better problem‑solving method for challenging tasks, and learning new technologies and tools if the need arises. Through this process, I hope to grow up with my collegues.
 
 I start my blog to record and share what I have learned.  
 
@@ -20,8 +22,7 @@ I start my blog to record and share what I have learned.
  
 - Machine Learning
 - Deep Learning  
-- Robotics
-- Sensor Fusion
+- Path Planning
 
 ## Contacts  
 
